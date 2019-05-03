@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+ body, html {
+                height: 100%;
+                background-image: url('') !important;
+
+              }
+              
+
+</style>
+<div style="height: 100%; width: 100%" class="d-flex justify-content-center">
+<img src="{{ data }}" class="img-fluid" alt="Responsive image"/>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+    <h3 class="text-danger">You only get this once. Please save it</h3>
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Your image url path</span>
+  </div>
+<input type="text" class="form-control" value="{{ url }}"/> 
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Your a tag path</span>
+  </div>
+<input type="text" class="form-control" value="<a href={{url}}>{{ url }}</a>" />
+</div>
+
+{% endblock %}
